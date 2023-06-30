@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  height: 100vh;
+ background: linear-gradient(to right, rgba(128, 0, 128, 0.4), rgba(255, 215, 0, 0.4)), url(./Location\ review.gif);
+
+ background-position: center;
+ background-repeat: no-repeat;
+  display: grid;
+  grid-template-rows: 10rem 1fr;
+  /* color: white; */
+}
+#text {
+  /* border: 3px solid black; */
+  display: grid;
+  place-content: center;
+}
+#search-field {
+  text-align: center;
+  margin-top: 5rem;
+}
+#input {
+  width: 20rem;
+  height: 3rem;
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+#btn{
+    padding: 0.9rem;
+    background-color: linear-gradient(to right, rgba(128, 0, 128, 0.4), rgba(255, 215, 0, 0.4));
+    border: none;
+    border-radius: 1px;
+    background: white;
+    font-weight: 700;
+}
+
+.result{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  flex-direction: column;
+  height: 200px;
+}
+/* h2{
+  margin-top: 1rem;
+} */
+/* i{
+margin-top: 2rem;
+} */
