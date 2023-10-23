@@ -18,6 +18,13 @@ function updateResults(data) {
 
 function getLocation() {
   const query = input.value;
+
+  // Check if the input field is empty
+  if (query.trim() === '') {
+    alert('Please enter a valid query.'); // You can use a more user-friendly method to alert the user.
+    return;
+  }
+
   fetch(`http://ip-api.com/json/${query}`)
     .then((response) => response.json())
     .then((data) => {
