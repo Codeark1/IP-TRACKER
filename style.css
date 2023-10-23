@@ -1,27 +1,45 @@
+/* Define a professional color palette */
+:root {
+  --primary-color: #6200CC;       /* Purple */
+  --secondary-color: #FFD700;     /* Gold */
+  --text-color: #333;             /* Dark gray for text */
+  --background-gradient-start: rgba(98, 0, 204, 0.4);
+  --background-gradient-end: rgba(255, 215, 0, 0.4);
+}
+
+/* Base styles (for all screen sizes) */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-.container {
-  height: 100vh;
- background: linear-gradient(to right, rgba(128, 0, 128, 0.4), rgba(255, 215, 0, 0.4)), url(./Location\ review.gif);
 
- background-position: center;
- background-repeat: no-repeat;
-  display: grid;
-  grid-template-rows: 10rem 1fr;
-  /* color: white; */
+body {
+
+  background: linear-gradient(to right, var(--background-gradient-start), var(--background-gradient-end)), url(./Location\ review.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
 }
-#text {
-  /* border: 3px solid black; */
-  display: grid;
-  place-content: center;
+
+#text{
+  color: white;
+  
+
 }
-#search-field {
+.container {
   text-align: center;
-  margin-top: 5rem;
 }
+
+#search-field {
+  margin-top: 2rem;
+}
+
 #input {
   width: 20rem;
   height: 3rem;
@@ -29,27 +47,41 @@
   border-radius: 5px;
   border: none;
   outline: none;
-}
-#btn{
-    padding: 0.9rem;
-    background-color: linear-gradient(to right, rgba(128, 0, 128, 0.4), rgba(255, 215, 0, 0.4));
-    border: none;
-    border-radius: 1px;
-    background: white;
-    font-weight: 700;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--text-color);
 }
 
-.result{
+#btn {
+  padding: 0.9rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+background-color: rgb(119, 51, 26);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#btn:hover {
+ 
+  transform: scale(1.05);
+}
+
+.result {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   margin-top: 20px;
-  flex-direction: column;
-  height: 200px;
 }
-/* h2{
+
+.result h2 {
   margin-top: 1rem;
-} */
-/* i{
-margin-top: 2rem;
-} */
+  color: var(--text-color);
+}
+
+.result i {
+  margin-top: 1rem;
+  font-size: 24px;
+  color: var(--primary-color);
+}
